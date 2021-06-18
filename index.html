@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ssssnake</title>
+    <script src="game.js" defer type="module">
+    </script>
+    <style>
+        body{
+            margin: 0;
+            background-color: azure;
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+        }
+        #game-board{
+            margin: 0;
+            padding: 0;
+            border: 1px solid black;
+            margin: auto;
+            display: grid;
+            grid-template-rows: repeat(21,1fr);
+            grid-template-columns: repeat(21,1fr);
+            width: 99vmin;
+            height: 99vmin;
+            background-color: gray;
+        }
+        .snake{
+            width: 100%;
+            height: 100%;
+            margin-left: 50%;
+            margin-top: 50%;
+            transform: translate(-50%, -50%);
+            background-color: greenyellow;
+            outline: 0px solid black;
+            z-index: 1;
+
+        }
+        .food{
+            width: 70%;
+            height: 70%;
+            margin-left: 50%;
+            margin-top: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            background-image: url('./apple.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            z-index: 1;
+
+            /* background-color:lightblue; */
+            /* outline: 1px solid black; */
+        }
+        .snakeHead{
+            width: 100%;
+            height: 100%;
+            margin-left: 50%;
+            margin-top: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgb(139, 209, 34);
+            z-index: 1;
+        }
+        #beginning-screen{
+            width: auto;
+            height: 20%;
+            position: absolute;
+            left: 50%;
+            top: 10%;
+            transform: translate(-50%);
+            background-color: transparent;
+            text-align: center;
+            z-index: 10;
+        }
+        .startText{
+            color: black;
+            font-family: monospace;
+            font-weight: bold;
+            font-size: 1.5rem;
+            visibility: visible;
+        }
+        .endText{
+            color: black;
+            font-family: monospace;
+            font-weight: bold;
+            font-size: 1.5rem;
+            visibility: hidden;
+        }
+        .foodOccupied{
+            width: 100%;
+            height: 100%;
+            z-index: 20;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div id="beginning-screen">
+        <p class="startText">Use arrows to move.</p>
+        <p class="endText">Oops you died. <br> Press ENTER to retry.</p>
+    </div>
+    <div id="game-board">
+    </div>
+</body>
+</html>
