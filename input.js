@@ -35,7 +35,7 @@ window.addEventListener('keydown', e =>{
             break;
         case "Enter":
             if( GAME_OVER )
-                window.location = '/';
+                location.reload();
     }
 });
 
