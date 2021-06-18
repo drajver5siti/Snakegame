@@ -4,7 +4,7 @@ var GAME_SCORE = 0;
 
 
 let foodPosition = { x: 10, y: 7};
-const EXPANSION_RATE = 3;
+const EXPANSION_RATE = 1;
 
 const randomFoodPosition = (min = 1, max = 1) =>{
     let newFoodPos;
