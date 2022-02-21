@@ -6,7 +6,4 @@ There are a few bugs:
   - EXPANSION_RATE can't be greater than 3, it conflicts with the death and creates problems.
   
   
- IMPORTANT !!!
- 
- You need to set up the files on a server, use VS code extension Live Server.
- If you just open the index file in a browser it wont work, JS modules can't be run locally so it creates a CORS policy violation and screws it up.
+To run this open index.html with Live Server extension in VS code.
